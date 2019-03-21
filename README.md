@@ -18,14 +18,22 @@ A Ruby web app that asks the user for their name and birthday, and gives a messa
 
 #### Personal motivation
 
+- ...
+
 
 ## Steps to download
+
+- ...
 
 
 ## Steps to run
 
+- ...
 
-## To run tests
+
+## To run tests
+
+- ...
 
 
 ## My approach
@@ -60,14 +68,14 @@ So that I can see personalised messages,
 I want to be able to enter my name and birthday.
 
 
-User story 1: Countdown
+User story 2: Countdown
 -----------------------
 As a user,
 So that I can count down to my celebration,
 I want to see how many days there are until my birthday.
 
 
-User story 2: Happy birthday!
+User story 3: Happy birthday!
 -----------------------------
 As I user,
 So that I feel good on my birthday,

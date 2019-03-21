@@ -2,7 +2,8 @@ require "sinatra/base"
 
 class Birthday < Sinatra::Base
   get "/" do
-    "Infrastructure working!"
+    # "Infrastructure working!"
+    erb(:index)
   end
 
   run! if app_file ==$0
