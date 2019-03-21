@@ -1,6 +1,6 @@
 # User story 1: Enter details
 # ---------------------------
-# As a user
+# As a user,
 # So that I can see personalised messages,
 # I want to be able to enter my name and birthday.
 
@@ -19,5 +19,4 @@ describe "Homepage" do
     visit("/")
     expect(page).to have_selector "form input[name='birthday']"
   end
-
 end

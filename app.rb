@@ -1,9 +1,35 @@
 require "sinatra/base"
+require "date"
 
 class Birthday < Sinatra::Base
+
+  enable :sessions
+
   get "/" do
     # "Infrastructure working!"
     erb(:index)
+  end
+
+  post "/details" do
+    session[:name] = params[:name]
+    session[:birthday] = params[:birthday]
+    redirect("/message")
+  end
+
+  get "/message" do
+    @name = session[:name]
+    @birthday = session[:birthday]
+    today = DateTime.parse(Time.now.strftime("%F")).to_date
+    parsed_birthday = DateTime.parse(@birthday).to_date
+    if parsed_birthday.strftime("%m" "%d") >= Time.now.strftime("%m" "%d")
+      countdown_birthday = Time.new(Time.now.year, parsed_birthday.month, parsed_birthday.day)
+    else
+      countdown_birthday = Time.new(Time.now.year + 1, parsed_birthday.month, parsed_birthday.day)
+    end
+    parsed_countdown_birthday = countdown_birthday.to_date
+    @countdown = (parsed_countdown_birthday - today).to_i
+
+    erb(:message)
   end
 
   run! if app_file ==$0

@@ -63,7 +63,7 @@ A Ruby web app that asks the user for their name and birthday, and gives a messa
 ```
 User story 1: Enter details
 ---------------------------
-As a user
+As a user,
 So that I can see personalised messages,
 I want to be able to enter my name and birthday.
 
