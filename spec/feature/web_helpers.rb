@@ -4,7 +4,7 @@ def birthday_in_3_days
   birthday_date = DateTime.parse(Time.now.strftime("%F")).to_date + 3
   fill_in("name", with: "Matt")
   fill_in("birthday", with: birthday_date)
-  click_on("Submit")
+  click_on("Go!")
 end
 
 def birthday_tomorrow
@@ -13,7 +13,7 @@ def birthday_tomorrow
   birthday_date = DateTime.parse(Time.now.strftime("%F")).to_date + 1
   fill_in("name", with: "Matt")
   fill_in("birthday", with: birthday_date)
-  click_on("Submit")
+  click_on("Go!")
 end
 
 def birthday_today
@@ -22,5 +22,5 @@ def birthday_today
   birthday_date = DateTime.parse(Time.now.strftime("%F")).to_date
   fill_in("name", with: "Matt")
   fill_in("birthday", with: birthday_date)
-  click_on("Submit")
+  click_on("Go!")
 end
