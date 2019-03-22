@@ -14,6 +14,11 @@ h1 {
   flex-direction: column;
   margin: auto;
   max-width: 600px;
+  text-align: center
+}
+
+.error {
+  color: rgb(90, 53, 5)
 }
 
 .form {

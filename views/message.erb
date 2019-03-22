@@ -6,15 +6,15 @@
 
 <% if @countdown < 1 %>
 
-  <h2><%= "Happy birthday #{@name}!" %></h2>  
+  <h2 class="container"><%= "Happy birthday #{@name}!" %></h2>  
 
 <% elsif @countdown == 1 %>
 
-  <h2><%= "Your birthday is tomorrow, #{@name}!" %></h2>
+  <h2 class="container"><%= "Your birthday is tomorrow, #{@name}!" %></h2>
 
 <% else %>
 
-  <h2><%= "Your birthday is in #{@countdown} days, #{@name}!" %></h2>
+  <h2 class="container"><%= "Your birthday is in #{@countdown} days, #{@name}!" %></h2>
 
 <% end %>
 

@@ -13,7 +13,11 @@ class Birthday < Sinatra::Base
   post "/details" do
     session[:name] = params[:name]
     session[:birthday] = params[:birthday]
-    redirect("/message")
+    if session[:birthday] == "" || session[:name] == ""
+      redirect("/error")
+    else
+      redirect("/message")
+    end
   end
 
 # Next piece of work -> refactor below out to a class (model)
@@ -32,6 +36,10 @@ class Birthday < Sinatra::Base
     @countdown = (parsed_countdown_birthday - today).to_i
 
     erb(:message)
+  end
+
+  get "/error" do
+    erb(:error)
   end
 
   run! if app_file ==$0

@@ -24,3 +24,18 @@ def birthday_today
   fill_in("birthday", with: birthday_date)
   click_on("Go!")
 end
+
+def no_name
+  visit("/")
+  today = DateTime.parse(Time.now.strftime("%F")).to_date
+  birthday_date = DateTime.parse(Time.now.strftime("%F")).to_date
+  fill_in("birthday", with: birthday_date)
+  click_on("Go!")
+end
+
+def no_birthday
+  visit("/")
+  today = DateTime.parse(Time.now.strftime("%F")).to_date
+  fill_in("name", with: "Matt")
+  click_on("Go!")
+end
