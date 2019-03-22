@@ -16,6 +16,8 @@ class Birthday < Sinatra::Base
     redirect("/message")
   end
 
+# Next piece of work -> refactor below out to a class (model)
+
   get "/message" do
     @name = session[:name]
     @birthday = session[:birthday]
